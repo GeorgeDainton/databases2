@@ -1,7 +1,7 @@
 
 require 'sinatra/base'
-# require 'sinatra/reloader'
-# require 'pg'
+require 'sinatra/reloader'
+require 'pg'
 require './lib/bookmark'
 
 
@@ -19,7 +19,7 @@ class BookmarkManager < Sinatra::Base
     erb :'bookmarks/index'
   end
 
-  get 'bookmarks/new' do
+  get '/bookmarks/new' do
     erb :"bookmarks/new"
   end
 
